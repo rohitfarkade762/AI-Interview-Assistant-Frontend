@@ -70,7 +70,7 @@ const ResumeAnalyzer = () => {
       formData.append('userId', user.id);
       formData.append('jobDescription', jobDescription);
 
-      const response = await fetch('http://localhost:5000/api/analyze-resume', {
+      const response = await fetch('https://ai-interview-assistant-backend-f8ao.vercel.app/api/analyze-resume', {
         method: 'POST',
         body: formData,
         

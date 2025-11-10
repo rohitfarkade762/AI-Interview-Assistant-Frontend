@@ -89,7 +89,7 @@ export default function VoiceAssistant() {
       
       console.log("Sending - Question Number:", currentQNumber, "Question:", currentQuestion?.question);
       
-      const res = await fetch("http://localhost:5000/api/interview", {
+      const res = await fetch("https://ai-interview-assistant-backend-f8ao.vercel.app/api/interview", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

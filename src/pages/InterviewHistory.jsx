@@ -29,7 +29,7 @@ const InterviewHistory = () => {
     if (!user) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/interviews/${user.id}`);
+      const response = await fetch(`https://ai-interview-assistant-backend-f8ao.vercel.app/api/interviews/${user.id}`);
       const data = await response.json();
       setInterviews(data.interviews || []);
     } catch (error) {

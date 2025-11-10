@@ -51,7 +51,7 @@ const InterviewPrep = () => {
     if (!user) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/analyses/${user.id}`);
+      const response = await fetch(`https://ai-interview-assistant-backend-f8ao.vercel.app/api/analyses/${user.id}`);
       const data = await response.json();
       
       setAnalyses(data.analyses || []);
@@ -99,7 +99,7 @@ const InterviewPrep = () => {
     setGeneratingQuestions(true);
     
     try {
-      const response = await fetch('http://localhost:5000/api/generate-interview-questions', {
+      const response = await fetch('https://ai-interview-assistant-backend-f8ao.vercel.app/api/generate-interview-questions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

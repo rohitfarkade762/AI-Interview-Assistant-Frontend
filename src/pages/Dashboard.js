@@ -40,7 +40,7 @@ const ResumeHistory = () => {
     setError('');
 
     try {
-      const response = await fetch(`http://localhost:5000/api/analyses/${user.id}`);
+      const response = await fetch(`https://ai-interview-assistant-backend-f8ao.vercel.app/api/analyses/${user.id}`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch analyses');
@@ -136,10 +136,11 @@ const ResumeHistory = () => {
 
   // Delete analysis
   const deleteAnalysis = async (analysisId) => {
+    // eslint-disable-next-line no-restricted-globals
     if (!confirm('Are you sure you want to delete this analysis?')) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/analysis/${analysisId}`, {
+      const response = await fetch(`https://ai-interview-assistant-backend-f8ao.vercel.app/api/analysis/${analysisId}`, {
         method: 'DELETE'
       });
 
