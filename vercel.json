@@ -2,10 +2,7 @@
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/",
-            "installCommand": "npm install",
-            "outputDirectory": "build",
-            "nodeVersion": "18"
+            "destination": "build"
               
               
         }
