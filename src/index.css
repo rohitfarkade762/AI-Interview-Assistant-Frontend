@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Otfit",sans-serif;
+}
+
+.hero{
+  background-image: url(./assets/gradientBackground.png);
+}
